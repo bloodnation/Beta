@@ -2,26 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const joinButton = document.querySelector(".submit-button");
   const form = document.querySelector("form");
 
-  // Modal Welcome Popup
-  function showModal() {
-    const modal = document.createElement("div");
-    modal.classList.add("modal");
-    modal.innerHTML = `
-      <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h2>Welcome to Hydra</h2>
-        <p>Join us as we reshape the future. Together, we are unstoppable!</p>
-      </div>
-    `;
-    document.body.appendChild(modal);
-
-    const closeButton = document.querySelector(".close-button");
-    closeButton.addEventListener("click", function () {
-      modal.style.display = "none";
-    });
-  }
-  showModal();
-
   // Form Validation
   form.addEventListener("submit", function (event) {
     event.preventDefault();
