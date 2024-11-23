@@ -1,0 +1,464 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #1a1a1a;
+  padding: 15px 0;
+}
+.navbar ul {
+  list-style: none;
+}
+.navbar li {
+  display: inline;
+  margin: 0 15px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #A00000;
+  font-weight: bold;
+}
+.navbar a:hover {
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, #000000, #1a1a1a);
+  animation: fadeIn 2s ease-in-out;
+}
+.hero .logo {
+  width: 150px;
+  margin-bottom: 20px;
+  animation: logoBounce 2s infinite;
+}
+.hero h1 {
+  font-size: 3rem;
+  color: #A00000;
+  animation: textFade 3s ease-in-out;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin: 10px 0 20px;
+  animation: textFade 3s ease-in-out;
+}
+.cta-button {
+  text-decoration: none;
+  background-color: #A00000;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 5px;
+}
+.cta-button:hover {
+  background-color: #4B4B4B;
+  transform: scale(1.1);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* About Hydra Section */
+.about {
+  padding: 40px 20px;
+  text-align: center;
+  background: url('hydra-background.jpg') no-repeat center center / cover;
+  color: #E5E5E5;
+  position: relative;
+}
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+.about h2 {
+  font-size: 2rem;
+  color: #A00000;
+  margin-bottom: 20px;
+  z-index: 1;
+  position: relative;
+}
+.about p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  z-index: 1;
+  position: relative;
+}
+.about .hail {
+  color: #A00000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  color: #4B4B4B;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes logoBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes textFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+.contact h1 {
+  font-size: 2.5rem;
+  color: #A00000;
+  margin-bottom: 10px;
+}
+.contact p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #111;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #A00000;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #666;
+}
+
+.submit-button {
+  background-color: #A00000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #4B4B4B;
+  transform: scale(1.05);
+}
+
+/* Responsive Design for Contact Form */
+@media (max-width: 768px) {
+  .contact h1 {
+    font-size: 2rem;
+  }
+  .contact p {
+    font-size: 1rem;
+  }
+}
+
+/* Leaders Section */
+.leaders {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+.leaders h1 {
+  font-size: 2.5rem;
+  color: #A00000;
+  margin-bottom: 10px;
+}
+.leaders p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.leader-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.leader-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #111;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+.leader-card:hover {
+  transform: scale(1.05);
+}
+
+.leader-image {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.leader-card h2 {
+  font-size: 1.5rem;
+  color: #A00000;
+  margin: 10px 0;
+}
+.leader-card p {
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.leader-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+}
+
+.leader-card:hover .leader-overlay {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .leaders h1 {
+    font-size: 2rem;
+  }
+  .leader-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mission Section */
+.mission {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #1a1a1a, #000);
+  color: #fff;
+}
+.mission h1 {
+  font-size: 2.5rem;
+  color: #A00000;
+  margin-bottom: 10px;
+}
+.mission p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.mission-statement, .objectives, .values {
+  background-color: #111;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.mission-statement h2, .objectives h2, .values h2 {
+  color: #A00000;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.mission-statement p, .objectives ul, .values ul {
+  color: #E5E5E5;
+  line-height: 1.6;
+}
+
+.objectives ul, .values ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.objectives li, .values li {
+  margin-bottom: 15px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.objectives li::before, .values li::before {
+  content: "•";
+  color: #A00000;
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.hail {
+  color: #A00000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission h1 {
+    font-size: 2rem;
+  }
+  .mission-statement h2, .objectives h2, .values h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Join Section */
+.join {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #1a1a1a, #000);
+  color: #fff;
+}
+.join h1 {
+  font-size: 2.5rem;
+  color: #A00000;
+  margin-bottom: 10px;
+}
+.join p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.join-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #111;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #A00000;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1rem;
+}
+
+textarea::placeholder {
+  color: #666;
+}
+
+.submit-button {
+  background-color: #A00000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #4B4B4B;
+  transform: scale(1.05);
+}
+
+/* Responsive Design for Join Form */
+@media (max-width: 768px) {
+  .join h1 {
+    font-size: 2rem;
+  }
+}
