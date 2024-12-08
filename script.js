@@ -36,3 +36,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+(function () {
+    let devtools = false;
+
+    const checkDevTools = function () {
+        const threshold = 160;
+        const widthDiff = window.outerWidth - window.innerWidth > threshold;
+        const heightDiff = window.outerHeight - window.innerHeight > threshold;
+
+        if (widthDiff || heightDiff) {
+            devtools = true;
+            onDevToolsOpen();
+        } else {
+            devtools = false;
+        }
+    };
+
+    const onDevToolsOpen = function () {
+        // Action when developer tools are detected
+        alert('Developer tools detected! The website will self-destruct.');
+        document.body.innerHTML = ""; // Clear content
+        // or redirect
+        window.location.href = "https://google.com";
+    };
+
+    window.addEventListener('resize', checkDevTools);
+    checkDevTools();
+})();
