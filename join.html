@@ -25,24 +25,20 @@
     <p>Are you ready to be part of something greater? Join Hydra and contribute to a new world order.</p>
 
     <div class="join-form-container">
-      <form action="submit_join.php" method="post">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="skills">Skills & Expertise</label>
-        <textarea id="skills" name="skills" rows="4" required placeholder="Describe your skills, experience, and why you want to join Hydra"></textarea>
-
-        <button type="submit" class="submit-button">Join the Cause</button>
-      </form>
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+        <input type="hidden" name="access_key" value="2989ad4a-e558-4536-ac43-92c4c481eed5">
+        <input type="text" name="name" placeholder="Your Name" class="contact-input" required>
+        <input type="email" name="email" placeholder="Your Email" class="contact-input" required>
+        <input type="text" name="Skills & Expertise" placeholder="Describe your skills, experience, and why you want to join Hydra" class="contact-input" required>
+        <button class="submit-button" type="submit">Submit <img src="/assets/arrow_icon.png" alt=""></button>
+    </form>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© Hydra 2024. All Rights Reserved.</p>
+    <p>Contact Us at <a href="mailto:alucarddracula23@proton.me">AlucardDracula</a></p>
+    <p>&copy; <span id="copyrightYear"></span> Hydra. All rights reserved.</p>
   </footer>
 </body>
 <script src="script.js"></script>

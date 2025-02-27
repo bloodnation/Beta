@@ -175,13 +175,6 @@ form {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-label {
-  display: block;
-  margin-top: 15px;
-  font-weight: bold;
-  color: #A00000;
-}
-
 input[type="text"],
 input[type="email"],
 textarea {
@@ -190,10 +183,17 @@ textarea {
   margin-top: 5px;
   margin-bottom: 15px;
   border: 1px solid #333;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #222;
   color: #fff;
   font-size: 1rem;
+  text-align: center;
+}
+
+.contact-left textarea{
+  height: 200px;
+  padding-top: 15px;
+  border-radius: 20px;
 }
 
 input::placeholder,
@@ -457,8 +457,14 @@ textarea::placeholder {
 }
 
 /* Responsive Design for Join Form */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .join h1 {
     font-size: 2rem;
   }
+}
+
+footer a {
+  text-decoration: none;
+  color: #A00000;
+  font-weight: bold;
 }

@@ -24,27 +24,23 @@
     <h1>Contact Hydra</h1>
     <p>Have a question or want to join our mission?</p>
     <p> Reach out to Hydra using the form below.</p>
-    
-    <form action="submit_contact.php" method="post">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+      <input type="hidden" name="access_key" value="2989ad4a-e558-4536-ac43-92c4c481eed5">
+      <input type="text" name="name" placeholder="Your Name" class="contact-input" required>
+      <input type="email" name="email" placeholder="Your Email" class="contact-input" required>
+      <input type="text" name="subject" placeholder="Subject" class="contact-input" required>
+      <textarea name="message" placeholder="Your Message" class="contact-input" required></textarea>
+      <button class="submit-button" type="submit">Submit <img src="/assets/arrow_icon.png" alt=""></button>
+  </form>
 
-      <label for="subject">Subject</label>
-      <input type="text" id="subject" name="subject" required>
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-
-      <button type="submit" class="submit-button">Send Message</button>
-    </form>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© Hydra 2024. All Rights Reserved.</p>
+    <p>Contact Us at <a href="mailto:alucarddracula23@proton.me">AlucardDracula</a></p>
+    <p>&copy; <span id="copyrightYear"></span> Hydra. All rights reserved.</p>
   </footer>
 </body>
+<script src="script.js"></script>
 </html>

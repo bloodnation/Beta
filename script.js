@@ -1,21 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const joinButton = document.querySelector(".submit-button");
-  const form = document.querySelector("form");
-
-  // Form Validation
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const skills = document.getElementById("skills").value.trim();
-
-    if (!name || !email || !skills) {
-      alert("Please fill in all fields to join Hydra.");
-    } else {
-      alert(`Thank you, ${name}, for joining Hydra!`);
-      form.reset(); // Clear form fields
-    }
-  });
 
   // Button Hover Effect
   if (joinButton) {
@@ -37,30 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-(function () {
-    let devtools = false;
+//copyright
+function updateCopyrightYear() {
+  const currentYear = new Date().getFullYear();
+  document.getElementById("copyrightYear").textContent = currentYear;
+}
 
-    const checkDevTools = function () {
-        const threshold = 160;
-        const widthDiff = window.outerWidth - window.innerWidth > threshold;
-        const heightDiff = window.outerHeight - window.innerHeight > threshold;
-
-        if (widthDiff || heightDiff) {
-            devtools = true;
-            onDevToolsOpen();
-        } else {
-            devtools = false;
-        }
-    };
-
-    const onDevToolsOpen = function () {
-        // Action when developer tools are detected
-        alert('Developer tools detected! The website will self-destruct.');
-        document.body.innerHTML = ""; // Clear content
-        // or redirect
-        window.location.href = "https://google.com";
-    };
-
-    window.addEventListener('resize', checkDevTools);
-    checkDevTools();
-})();
+updateCopyrightYear(); // Call the function to update the year
