@@ -45,10 +45,8 @@ hydra-recruitment/
 ├── index.html            # Main HTML file
 ├── style.css             # Stylesheet for the application
 ├── script.js             # JavaScript for interactivity and validation
-├── submit_join.php       # PHP script to handle form submissions
 ├── favicon.ico           # Favicon for the website
 ├── README.md             # Project documentation
-└── submissions.txt       # (Optional) Stores form submissions
 ```
 
 ## Usage
